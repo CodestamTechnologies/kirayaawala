@@ -37,7 +37,7 @@ export default function Footer() {
           <img
             src="/choose1.jpg"
             alt="bedroom"
-            className="rounded-xl w-full h-auto object-cover"
+            className="rounded-xl w-full h-[300px] object-cover"
           />
         </div>
       </div>

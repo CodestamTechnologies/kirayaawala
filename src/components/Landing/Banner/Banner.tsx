@@ -1,6 +1,8 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -15,14 +17,14 @@ export default function Banner() {
           Our award-winning designs blend elegance and functionality to bring your dream spaces to life. See why thousands trust us to transform their homes with passion and precision.
         </p>
 
-        <div className="relative w-full rounded-2xl overflow-hidden shadow-lg max-w-4xl aspect-[1200/700]">
+        <div className="relative w-full rounded-2xl overflow-hidden shadow-lg max-w-4xl aspect-[1200/2000] sm:aspect-[1200/800]">
           <Image
             src="/herobg.jpg"
             alt="Top Rated Interior"
             fill
-            className="object-cover"
+            className="object-cover "
             priority
-            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 1200px"
+            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 1200px "
           />
           {/* Overlay content */}
           <div className="absolute inset-0 flex flex-col justify-center items-center p-8 bg-black/30 text-white backdrop-blur-sm">
@@ -32,9 +34,11 @@ export default function Banner() {
             <p className="mb-6 max-w-md text-center leading-relaxed">
               Discover the perfect blend of style and comfort with our custom interior designs. Every detail crafted to suit your unique taste.
             </p>
-            <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
-              Explore Now
-            </button>
+            <Link href="/rooms">
+              <Button variant={'secondary'} className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+                Explore Now
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -65,9 +69,10 @@ export default function Banner() {
             <li><strong>Post-installation Support:</strong> We’re here to help with any questions or adjustments after completion.</li>
           </ul>
 
-          <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition w-full sm:w-auto">
-            Contact Our Team
-          </button>
+          <Link href={"/contact"} className="cursor-pointer">
+            <Button className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition w-full sm:w-auto">
+              Contact Our Team
+            </Button></Link>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 const stats = [
   { value: "3665 sft", label: "Property size upto" },
@@ -13,7 +14,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[150vh] md:h-screen flex flex-col justify-center text-white">
+    <section className="relative w-full h-[120vh] md:h-screen flex flex-col justify-center text-white">
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -27,7 +28,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto flex flex-col items-center text-center px-6 mt-10">
+      <div className="container mx-auto flex flex-col items-center text-center px-6 mt-15">
         <p className="uppercase tracking-widest text-sm md:text-base text-gray-200">
           Get Your Dream House
         </p>
@@ -35,36 +36,40 @@ export default function Hero() {
           KIRAYAAWALA
         </h1>
         <p className="mt-4 max-w-2xl text-base md:text-lg text-gray-300">
-          Discover the perfect rental property tailored to your needs.  
+          Discover the perfect rental property tailored to your needs.
           We connect tenants and property owners with ease, efficiency, and trust.
         </p>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <Button
-            variant="default"
-            className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6"
-          >
-            Discover More
-          </Button>
-          <Button
-            variant="secondary"
-            className="text-lg px-8 py-6"
-          >
-            Call Us Now
-          </Button>
+          <Link href={"/rooms"}>
+            <Button
+              variant="default"
+              className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6"
+            >
+              Discover More
+            </Button>
+          </Link>
+          <Link href={"/contact"}>
+            <Button
+              variant="secondary"
+              className="text-lg px-8 py-6"
+            >
+              Call Us Now
+            </Button>
+          </Link>
         </div>
       </div>
 
       {/* Stats */}
       <div className="mt-16 px-6">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {stats.map(({ value, label }, i) => (
             <Card
               key={i}
               className="bg-white/95 text-black rounded-xl shadow-lg border border-gray-200"
             >
-              <CardContent className="flex flex-col items-center py-6">
+              <CardContent className="flex flex-col items-center py-6 md:py-2 lg:py-5">
                 <p className="text-2xl md:text-3xl font-bold">{value}</p>
                 <p className="text-sm md:text-base text-gray-600">{label}</p>
               </CardContent>

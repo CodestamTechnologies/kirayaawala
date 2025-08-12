@@ -14,23 +14,16 @@ export function Slider() {
     </div>
   );
 }
-
 const testimonials = [
-  {
-   
-    title: "A Tale of Two Cities",
-  },
-  {
-    
-    title: "Hamlet",
-  },
-  {
-    title: "A Dream Within a Dream",
-  },
-  {
-    title: "Pride and Prejudice",
-  },
-  {
-    title: "Moby-Dick",
-  },
+  { title: "Convenient" },
+  { title: "Trustworthy" },
+  { title: "Affordable" },
+  { title: "Seamless" },
+  { title: "Reliable" },
+  { title: "Efficient" },
+  { title: "Comfortable" },
+  { title: "Flexible" },
+  { title: "Secure" },
+  { title: "Quick" },
 ];
+

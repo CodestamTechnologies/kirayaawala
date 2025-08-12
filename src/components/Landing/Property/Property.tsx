@@ -134,9 +134,9 @@ export default function PropertyCarousel() {
                     >
                       Contact
                     </Button>
-                    <Button size="sm" variant="secondary">
+                    {/* <Button size="sm" variant="secondary">
                       + Wishlist
-                    </Button>
+                    </Button> */}
                   </div>
 
                   {property.badge && (

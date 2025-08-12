@@ -13,7 +13,7 @@ export default function Inquiry() {
         <h1 className="text-[3rem] sm:text-[4rem] md:text-[6rem] font-bold leading-none">
           Any inquiry
         </h1>
-        <p className="text-gray-500">Get in touch</p>
+        <p className="text-gray-500 my-4">Get in touch</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

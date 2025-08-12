@@ -10,7 +10,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full flex items-center justify-between px-6 md:px-8 py-4 z-20 text-black bg-white shadow-md">
+    <header className="fixed top-0 left-0 w-full flex items-center justify-between px-6 md:px-8 py-4 z-30 text-black bg-white shadow-md">
       {/* Logo */}
       <Link href="/" className="text-xl font-bold">
         Kirayaa Wala
@@ -19,6 +19,7 @@ export default function Header() {
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center gap-6">
         <Link href="/" className="hover:underline">Home</Link>
+        <Link href="/rooms" className="hover:underline">Rooms</Link>
         <Link href="/about" className="hover:underline">About</Link>
 
         {/* Essentials Dropdown */}
@@ -56,6 +57,7 @@ export default function Header() {
       {mobileOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg md:hidden p-4 space-y-4">
           <Link href="/" className="block hover:underline" onClick={() => setMobileOpen(false)}>Home</Link>
+          <Link href="/rooms" className="block hover:underline" onClick={() => setMobileOpen(false)}>Rooms</Link>
           <Link href="/about" className="block hover:underline" onClick={() => setMobileOpen(false)}>About</Link>
 
           {/* Essentials for Mobile */}
